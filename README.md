@@ -1,1 +1,1 @@
-# BFS-DFS-MST-animation
+# MST-animation
