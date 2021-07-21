@@ -6,4 +6,4 @@ MST Animation Project
 
 ## Execution Intstruction 
 Open index.html in a browser to see the animation web page. 
-### Hosted page :- https://priyankay151.github.io/MST-Animation/
+### Hosted page :- https://priyankay151.github.io/MST-animation/
