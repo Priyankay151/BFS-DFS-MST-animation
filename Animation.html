@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Algo_Animation</title>
+    <script src="cytoscape.js"></script>
+</head>
+
+<style>
+    #cy {
+        width: 60%;
+        height: 50%;
+        position: absolute;
+        /* top: 300px; */
+        left: 20vw;
+    }
+</style>
+
+<body>
+    <div style="margin: auto 5%;">
+        <div class="container-fluid ">
+            <div class="row text-center">
+                <div class="col">
+                    <div class="card mt-3 text-center bg-light">
+                        <h4 class="text-primary">BFS , DFS animation for directed graph</h4>
+                        <h5 class="red-text">Priyanka Yadav , IIT BHILAI</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-7 mr-5 mt-4"> -->
+                <div class="card mt-5 ml-5 mr-5 bg-primary " style="height: 75px">
+                    <div class="row">
+
+                        <div class="col">
+                            <select id='Algorithms'>
+                                <option value="MST">Minimum Spanning Tree</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-2 ">
+                            <button class="bg-success" id='submit' onclick="runAlgorithm()">Run Algorithm</button>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <!-- </div> -->
+                <div class="col-8 ml-4">
+                    <div class="card mt-4 bg-primary">
+                        <div class="row mt-2">
+
+                            <div class="col mb-3">
+                                <input type="number" name="numVert" placeholder="Number of Vertices" min=0 id="numVert">
+                            </div>
+                            <div class="col">
+                                <button class="bg-success" onclick="Addnodes()">Add Nodes</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s3 mb-3">
+                                <input type="text" name="src_edge" placeholder="Start node " id="src_edge">
+                            </div>
+                            <div class="col s3 mb-3">
+                                <input type="text" name="trg_edge" placeholder="End node " id="trg_edge">
+                            </div>
+                            <div class="col s3">
+                                <input type="text" name="weight" id="weight" placeholder="Weight">
+                            </div>
+                            <div class="col s3 mb-3">
+                                <button class="bg-success" onclick="Addedge()">Add Edge</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s3 mb-1">
+                                <input type="text" name="ID" placeholder="From->To " id="ID">
+                            </div>
+                            <div class="col s3">
+                                <button class="bg-success" onclick="remove()">Remove edge</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div clas="row">
+                <div id="cy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Animation.js"></script>
+    <script src="queue.js"></script>
+    <script src="stack.js"></script>
+</body>
+
+</html>
